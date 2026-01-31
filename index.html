@@ -12,7 +12,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="fav.svg">
-    <link rel="fav.svg">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3574/3574820.png">
 
     <title>Mindful Brew</title>
     
@@ -212,17 +212,17 @@
                         </button>
                     </div>
 
-                    <h2 class="font-playfair text-3xl mb-2 leading-tight animate-slide-up text-cream">
+                    <h2 class="font-playfair text-3xl mb-2 leading-tight text-cream">
                         How are you <br>
                         <span class="text-gold italic">feeling today?</span>
                     </h2>
-                    <p class="text-xs text-white/40 mb-6 max-w-[260px] leading-relaxed animate-slide-up font-light" style="animation-delay: 100ms">
+                    <p class="text-xs text-white/40 mb-6 max-w-[260px] leading-relaxed font-light">
                         Select your state for a Kandyan-inspired remedy.
                     </p>
 
                     <button @click="startQuickCalm()" 
-                            class="mb-6 w-full glass-card p-4 flex items-center gap-4 animate-slide-up group hover:bg-white/5 transition-colors active:scale-[0.98]" style="animation-delay: 150ms">
-                        <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">🧘</div>
+                            class="mb-6 w-full glass-card p-4 flex items-center gap-4 group hover:bg-white/5 transition-colors active:scale-[0.98]">
+                        <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-xl">🧘</div>
                         <div class="text-left">
                             <h3 class="font-playfair text-white text-base">Quick Calm</h3>
                             <p class="text-[10px] text-white/50 uppercase tracking-wider">1 Minute Breathing • No Tea Required</p>
@@ -233,11 +233,9 @@
                     <div class="grid grid-cols-2 gap-3">
                         <template x-for="(item, index) in moods" :key="item.id">
                             <button @click="selectTea(item)"
-                                    class="glass-card group relative h-36 p-5 text-left transition-all duration-300 hover:bg-white/5 hover:border-gold/30 hover:shadow-[0_0_25px_rgba(200,173,127,0.1)] active:scale-[0.98] active:bg-white/10 flex flex-col justify-between overflow-hidden"
-                                    :style="`animation-delay: ${index * 100 + 200}ms`"
-                                    :class="'animate-slide-up'">
+                                    class="glass-card group relative h-36 p-5 text-left transition-all duration-300 hover:bg-white/5 hover:border-gold/30 hover:shadow-[0_0_25px_rgba(200,173,127,0.1)] active:scale-[0.98] active:bg-white/10 flex flex-col justify-between overflow-hidden">
                                 <div class="kandyan-corner opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="absolute top-0 right-0 p-4 opacity-40 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110 group-hover:-rotate-6 origin-top-right grayscale group-hover:grayscale-0">
+                                <div class="absolute top-0 right-0 p-4 opacity-40 group-hover:opacity-100 transition-all duration-500 grayscale group-hover:grayscale-0">
                                     <span class="text-3xl filter drop-shadow-md" x-text="item.icon"></span>
                                 </div>
                                 <div class="mt-auto relative z-10">
